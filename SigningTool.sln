@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SigningTool", "SigningTool.csproj", "{598596C1-30CA-426C-ABAF-2C79E5A09C64}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{EF169F4D-36B8-4332-A51F-2114CF91956E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{598596C1-30CA-426C-ABAF-2C79E5A09C64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{598596C1-30CA-426C-ABAF-2C79E5A09C64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{598596C1-30CA-426C-ABAF-2C79E5A09C64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF169F4D-36B8-4332-A51F-2114CF91956E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF169F4D-36B8-4332-A51F-2114CF91956E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF169F4D-36B8-4332-A51F-2114CF91956E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF169F4D-36B8-4332-A51F-2114CF91956E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
