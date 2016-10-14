@@ -9,7 +9,8 @@ namespace SigningTool
         public enum Algorithm
         {
             MD5,
-            SHA1
+            SHA1,
+            SHA256
         }
         
         public static string GetHash(string path, Algorithm algorithm)

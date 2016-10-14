@@ -19,6 +19,12 @@ namespace Tests
             VerifyHash("Hash calculated using SHA1.", FileHasher.Algorithm.SHA1, "C561579D37ED07ABF663F5413808EAFC7EF2C4C5");
         }
 
+        [TestMethod]
+        public void TestSHA256Hash()
+        {
+            VerifyHash("Hash calculated using SHA256.", FileHasher.Algorithm.SHA256, "84821BCC54BF7F03711EA9185956714262C22062D4717255E031B0F424FF80C8");
+        }
+
         private void VerifyHash(string fileContent, FileHasher.Algorithm algorithm, string expectedHash)
         {
             var tempFile = Path.GetTempFileName();

@@ -14,21 +14,17 @@ namespace SigningTool
                     Console.WriteLine($"File not found '{options.filename}'");
                     Environment.Exit(1);
                 }
-                var hash = "";
-                if (options.algorithm.Equals("MD5"))
+                FileHasher.Algorithm algorithm;
+                try
                 {
-                    hash = FileHasher.GetHash(options.filename, FileHasher.Algorithm.MD5);
+                    algorithm = (FileHasher.Algorithm)Enum.Parse(typeof(FileHasher.Algorithm), options.algorithm);
+                    Console.WriteLine(FileHasher.GetHash(options.filename, algorithm));
                 }
-                else if (options.algorithm.Equals("SHA1"))
+                catch (ArgumentException)
                 {
-                    hash = FileHasher.GetHash(options.filename, FileHasher.Algorithm.SHA1);
-                }
-                else
-                {
-                    Console.WriteLine(options.GetUsage());
+                    Console.WriteLine($"Invalid algorithm '{options.algorithm}'");
                     Environment.Exit(1);
                 }
-                Console.WriteLine(hash);
             }
         }
     }

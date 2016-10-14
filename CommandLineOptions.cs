@@ -5,7 +5,7 @@ namespace SigningTool
 {
     class CommandLineOptions
     {
-        [Option('a', "algorithm", Required = true, HelpText = "Algorithm to use, MD5 or SHA1.")]
+        [Option('a', "algorithm", Required = true, HelpText = "Algorithm to use, MD5, SHA1, or SHA256.")]
         public string algorithm { get; set; }
 
         [Option('f', "file", Required = true, HelpText = "File to calculate hash on.")]
