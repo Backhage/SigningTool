@@ -24,7 +24,7 @@ namespace SigningTool
             var sb = new StringBuilder();
             foreach (var b in hash)
             {
-                sb.AppendFormat("{0:X2}", b);
+                sb.Append(b.ToString("X2"));
             }
 
             return sb.ToString();
