@@ -14,10 +14,9 @@ namespace SigningTool
                     Console.WriteLine($"File not found '{options.filename}'");
                     Environment.Exit(1);
                 }
-                FileHasher.Algorithm algorithm;
                 try
                 {
-                    algorithm = (FileHasher.Algorithm)Enum.Parse(typeof(FileHasher.Algorithm), options.algorithm);
+                    var algorithm = (FileHasher.Algorithm)Enum.Parse(typeof(FileHasher.Algorithm), options.algorithm);
                     Console.WriteLine(FileHasher.GetHash(options.filename, algorithm));
                 }
                 catch (ArgumentException)
